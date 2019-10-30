@@ -73,7 +73,7 @@ public class Paddle {
 
         }
 
-        if ( x < 1660)
+        if ( x < 1950)
         {
             if(paddleMoving == RIGHT){
                 x = x + paddleSpeed / fps;
@@ -85,8 +85,9 @@ public class Paddle {
         rect.right = x + length;
     }
 
-    public void reset(int x){
-        rect.left = x / 2;
-        rect.right = x / 2 + length;
+    public void reset(int x1){
+        rect.left = x1 / 2;
+        rect.right = x1 / 2 + length;
+        x = x1 / 2;
     }
 }

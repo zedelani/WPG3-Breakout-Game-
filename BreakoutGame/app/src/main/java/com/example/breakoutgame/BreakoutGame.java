@@ -122,7 +122,7 @@ public class BreakoutGame extends AppCompatActivity {
             screenX = size.x;
             screenY = size.y;
 
-            paddle = new Paddle(screenX, screenY);
+            paddle = new Paddle(screenX - 120, screenY);
 
             // Create a ball
             ball = new Ball(screenX, screenY);
@@ -166,7 +166,7 @@ public class BreakoutGame extends AppCompatActivity {
 
             // Put the ball back to the start
             ball.reset(screenX, screenY);
-            paddle.reset(screenX);
+            paddle.reset(screenX -120);
 
             int brickWidth = screenX / 8;
             int brickHeight = screenY / 10;
@@ -281,6 +281,11 @@ public class BreakoutGame extends AppCompatActivity {
             // Pause if cleared screen
             if (score == numBricks * 10)
             {
+                paused = true;
+                createBricksAndRestart();
+            }
+
+            if (lives <= 0) {
                 paused = true;
                 createBricksAndRestart();
             }
