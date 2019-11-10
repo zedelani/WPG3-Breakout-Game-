@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BreakoutGame</string>
+    <string name="app_id">470834082690</string>
+    <string name="signin_other_error">There was an issue with sign in. Please try again later.</string>
+    <string name="check_your_connection">Please Check Your Connection.</string>
+
+
+</resources>
